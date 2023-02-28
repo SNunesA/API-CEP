@@ -24,7 +24,15 @@ async function pesquisarCEP(){
         const dados = await fetch(url);
         const endereco = await dados.json();
         console.log(endereco);
-        preencherFormulario(endereco);
+        //retorna um booleano se contem essa propriedade
+        if (endereco.hasOwnProperty("erro")){
+            document.getElementById("endereco").value = "CEP nao encontrado"
+        }else{
+            preencherFormulario(endereco);
+            
+        }
+    } else {
+        document.getElementById("endereco").value= "CEP incorreto"
     }
 }
 
