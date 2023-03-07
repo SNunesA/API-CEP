@@ -33,8 +33,25 @@ async function pesquisarCEP(){
         }
     } else {
         document.getElementById("endereco").value= "CEP incorreto"
+        document.getElementById("numero").value= ""
+        document.getElementById("bairro").value= ""
+        document.getElementById("cidade").value= ""
+        document.getElementById("estado").value= ""
+        
     }
+}
+
+function limpacampo(){
+    document.getElementById("nome").value= ""
+    document.getElementById("email").value= ""
+    document.getElementById("cep").value= ""
+    document.getElementById("endereco").value= ""
+    document.getElementById("numero").value= ""
+    document.getElementById("bairro").value= ""
+    document.getElementById("cidade").value= ""
+    document.getElementById("estado").value= ""  
 }
 
 //focusout é quando o usuario terminou de inserir e tira o mouse daquele campo
 document.getElementById("cep").addEventListener("focusout",pesquisarCEP);
+
