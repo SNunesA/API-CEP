@@ -32,6 +32,13 @@ async function pesquisarCEP(){
         //retorna um booleano se contem essa propriedade
         if (endereco.hasOwnProperty("erro")){
             document.getElementById("endereco").value = "CEP nao encontrado"
+            document.getElementById("numero").value= ""
+            document.getElementById("bairro").value= ""
+            document.getElementById("cidade").value= ""
+            document.getElementById("estado").value= ""
+            document.getElementById("IBGE").value= ""
+            document.getElementById("DDD").value= ""
+            document.getElementById("Siafi").value= "" 
         }else{
             preencherFormulario(endereco);
             
